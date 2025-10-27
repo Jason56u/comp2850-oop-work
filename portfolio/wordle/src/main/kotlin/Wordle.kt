@@ -10,17 +10,17 @@ const val MAX_ATTEMPTS = 10
 // Returns true if the given word is valid in Wordle(i.e., if it consists of exactly 5 letters)
 // fun isValid(word: String): Boolean {
 //     if (word.length != WORD_LENGTH) {
-//         return false
+//          return false
 //     }
-
-//     for (char in word) {
-//         if (!char.isLetter()) {
-//             return false
-//         }
-//     }
-//     return true
+//       for (char in word) {
+//           if (!char.isLetter()) {
+//               return false
+//        }
+//    }
+//    return true
 // }
-// Return true if the word length is 5 and all letters
+
+// Return true if the word length is 5 and all letters .word.all { it.isLetter()}
 fun isValid(word: String): Boolean = word.length == WORD_LENGTH
 
 // fun2
@@ -58,9 +58,8 @@ fun obtainGuess(attempt: Int): String {
     while (true) {
         // Obtain the player input
         print("Attempt $attempt: ")
-        val input = readln()
-        val guess = input
-        // Continue to next step(if the input is valid and give the instructions)
+        val guess = readln()
+        // Continue to next step(if the guess is valid and give the instructions)
         if (isValid(guess)) {
             return guess.lowercase()
         }
