@@ -1,5 +1,4 @@
 // Implement the six required functions here
-// Implement the six required functions here
 import java.io.File
 
 const val WORD_LENGTH = 5
